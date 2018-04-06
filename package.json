@@ -1,0 +1,33 @@
+{
+  "name": "2FA_Notifier",
+  "version": "v0.1.0",
+  "scripts": {
+    "clean": "rm -rf dist/*",
+    "prebuild": "npm run clean",
+    "build": "npm run copy_source && npm run typescript && npm run webpack",
+    "postbuild": "find ./dist -name '*.ts' -delete",
+    "copy_source": "cp -R src/* dist/",
+    "webpack": "webpack",
+    "ff": "web-ext run -s dist/",
+    "typescript": "tsc",
+    "prerelease": "npm run build",
+    "release": "cd dist && zip -r ../releases/2FAN_NEXT.zip *",
+    "test": "npm run test-ts && npm run test-js",
+    "test-ts": "mocha --require ts-node/register src/**/*.test.ts",
+    "test-js": "mocha src/**/*.test.js"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.8",
+    "@types/chrome": "^0.0.63",
+    "@types/mocha": "^5.0.0",
+    "chai": "^4.1.2",
+    "mocha": "^5.0.5",
+    "ts-node": "^5.0.1",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.1",
+    "web-ext": "^2.2.2",
+    "webextension-polyfill": "^0.2.1",
+    "webextension-polyfill-ts": "^0.8.3",
+    "webpack": "^4.4.1"
+  }
+}

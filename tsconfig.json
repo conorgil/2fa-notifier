@@ -1,0 +1,22 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "allowJs": false,
+    "target": "ES2017",
+    "lib": [
+      "es2017",
+      "dom",
+
+      // https://github.com/Microsoft/TypeScript/issues/4947#issuecomment-295966266
+      "dom.iterable"
+    ],
+    "alwaysStrict": true,
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true
+  },
+  "include": [
+    "dist/**/*"
+  ]
+}

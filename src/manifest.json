@@ -1,0 +1,40 @@
+{
+  "name": "2FA Watcher",
+  "manifest_version": 2,
+  "version": "0.1.0",
+  "author": "Conor Gilsenan",
+  "description": "Notifies users whether the current browser page supports 2FA or not.",
+  
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*"
+      ],
+      "js": [
+        "extension/content/contentScript.bundle.js"
+      ]
+    }
+  ],
+
+  "background": {
+    "scripts": [
+      "extension/background/backgroundScript.bundle.js"
+    ],
+    "persistent": true
+  },
+
+  "browser_action": {
+    "default_popup": "extension/browserAction/popup.html"
+  },
+
+  "permissions": [
+    "storage",
+    "tabs",
+    "notifications"
+  ],
+
+  "web_accessible_resources": [
+    "icons/*",
+    "data.json"
+  ]
+}
