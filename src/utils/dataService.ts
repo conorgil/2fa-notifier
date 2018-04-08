@@ -1,10 +1,14 @@
+export async function loadServiceConfig(url: URL) {
+  return TWOFACTORAUTHORG_DATA[url.origin];
+}
+
 /**
  * The configuration for a single service.
  * 
  * @export
- * @interface SERVICE_ENTRY
+ * @interface SERVICE_CONFIG
  */
-export interface SERVICE_ENTRY {
+export interface SERVICE_CONFIG {
   name: string;
   url: string;
   img: string;
@@ -31,15 +35,15 @@ export interface SERVICE_ENTRY {
  */
 export interface CATEGORY_MAP {
   [category: string]: {
-    [serviceName: string]: SERVICE_ENTRY
+    [serviceName: string]: SERVICE_CONFIG
   }
 }
 
 export interface ORIGIN_TO_SERVICE_CONFIG {
-  [origin: string] : SERVICE_ENTRY;
+  [origin: string] : SERVICE_CONFIG;
 }
 
-export const TWOFACTORAUTHORG_DATA: ORIGIN_TO_SERVICE_CONFIG = {
+const TWOFACTORAUTHORG_DATA: ORIGIN_TO_SERVICE_CONFIG = {
   "https://www.aerofs.com": {
     "name": "AeroFS",
     "url": "https://www.aerofs.com/",
