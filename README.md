@@ -2,7 +2,7 @@
 whether or not the sites they visit support 
 two factor authentication (2FA).
 
-It utilizes the data from the [twofactorauth.org](twofactorauth.org)
+It utilizes the data from the [twofactorauth.org](https://twofactorauth.org)
 project to determine which sites do and do not support 2FA.
 
 Contributions are gladly accepted, but the project is still under
