@@ -26,9 +26,6 @@ export function handleRuntimeInstalledEvent(details: any) {
 
 function handleExtensionInstalledEvent(details: any) {
   console.log('[background_script:handleExtensionInstalled] Details = %O', details);
-  browser.tabs.create({
-    url: "https://www.twofactorbuddy.com/welcome"
-  });
 }
 
 function handleExtensionUpdatedEvent(details: any) {
