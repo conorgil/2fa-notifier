@@ -1,5 +1,5 @@
 {
-  "name": "2FA Watcher",
+  "name": "2FA Notifier",
   "manifest_version": 2,
   "version": "0.1.0",
   "author": "Conor Gilsenan",
@@ -34,7 +34,6 @@
   ],
 
   "web_accessible_resources": [
-    "icons/*",
-    "data.json"
+    "icons/*"
   ]
 }
