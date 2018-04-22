@@ -1,5 +1,5 @@
 import { browser } from 'webextension-polyfill-ts';
-import { SERVICE_CONFIG } from '../../utils/dataService';
+import { SERVICE_CONFIG } from '../utils/dataService';
 
 type NOTIFICATION_CONTEXT = SERVICE_CONFIG;
 

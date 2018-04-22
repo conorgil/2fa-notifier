@@ -1,6 +1,6 @@
 import { browser } from 'webextension-polyfill-ts';
 import { popNotification } from './notifications';
-import { loadServiceConfig } from '../../utils/dataService';
+import { loadServiceConfig } from '../utils/dataService';
 
 const DOMAINS = {};
 

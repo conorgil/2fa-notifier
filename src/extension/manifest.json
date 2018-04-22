@@ -1,0 +1,42 @@
+{
+  "name": "2FA Notifier",
+  "manifest_version": 2,
+  "version": "0.1.0",
+  "author": "Conor Gilsenan",
+  "description": "Notifies users whether the current browser page supports 2FA or not.",
+  
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*"
+      ],
+      "js": [
+        "generatedJS/content.bundle.js"
+      ]
+    }
+  ],
+
+  "background": {
+    "scripts": [
+      "generatedJS/background.bundle.js"
+    ],
+    "persistent": true
+  },
+
+  "browser_action": {
+    "default_popup": "browserAction/popup.html"
+  },
+
+  "permissions": [
+    "storage",
+    "tabs",
+    "notifications"
+  ],
+
+  "web_accessible_resources": [
+    "**/*.html",
+    "**/*.css",
+    "**/*.js",
+    "**/*.png"
+  ]
+}

@@ -17,6 +17,6 @@
     "noImplicitThis": true
   },
   "include": [
-    "dist/**/*"
+    "src/typescript/**/*"
   ]
 }
