@@ -12,7 +12,7 @@ export async function popNotification(options: { title: string; message: string;
     {
       type: 'basic',
       // TODO: update to use the icon for this service from twofactorauth.org?
-      iconUrl: browser.extension.getURL("icons/2fan_40px.png"),
+      iconUrl: browser.extension.getURL('icons/yes_2fa@3x.png'),
       title: options.title,
       message: options.message
     }
