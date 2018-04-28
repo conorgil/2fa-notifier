@@ -1,6 +1,5 @@
 import * as $ from 'jquery';
-import { getCurrentTab } from '../utils';
-import { loadServiceConfig } from '../utils/dataService';
+import { getConfigForCurrentTab, getCurrentTab } from '../utils';
 
 $(async function () {
   let originalWindowHeight = $(document).height();
@@ -16,15 +15,12 @@ $(async function () {
   });
 
   await showCorrect2faMethods();
+  await showCorrectSiteName();
+  await setupCorrectDocLink();
 });
 
 async function showCorrect2faMethods() {
-  let currentTab = await getCurrentTab();
-  if (!currentTab) { return; }
-
-  let currentUrl = currentTab.url;
-  let config = await loadServiceConfig(new URL(currentUrl));
-  if (!config) { return; }
+  let config = await getConfigForCurrentTab();
 
   if (!config.sms) {
     hide2faMethod('sms');
@@ -49,4 +45,20 @@ async function showCorrect2faMethods() {
 
 function hide2faMethod(method: string) {
   $(`#${method}`).toggle(false);
+}
+
+async function showCorrectSiteName() {
+  let tab = await getCurrentTab();
+  if (!tab) { return; }
+
+  let url = new URL(tab.url);
+  let site = url.hostname;
+  $('#siteName').text(site);
+}
+
+async function setupCorrectDocLink() {
+  let config = await getConfigForCurrentTab();
+  if (!config) { return; }
+
+  $('#cta-btn').attr('href', config.doc);
 }
