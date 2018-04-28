@@ -1,0 +1,69 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="normalize.css">  
+  <link rel="stylesheet" href="styles2FAN.css">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700" rel="stylesheet">
+  <script
+  src="./thirdParty/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="./supports2FA.js"></script>
+</head>
+
+<body>
+  <a href="menu.html" class="icon primary-nav">
+    <svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path d="M 19.0909 2L 0.909091 2C 0.667985 2 0.436754 1.89464 0.266266 1.70711C 0.0957788 1.51957 -2.7093e-08 1.26522 -2.7093e-08 1C -2.7093e-08 0.734784 0.0957788 0.480429 0.266266 0.292893C 0.436754 0.105357 0.667985 7.90407e-09 0.909091 0L 19.0909 0C 19.332 7.90407e-09 19.5632 0.105357 19.7337 0.292893C 19.9042 0.480429 20 0.734784 20 1C 20 1.26522 19.9042 1.51957 19.7337 1.70711C 19.5632 1.89464 19.332 2 19.0909 2Z" transform="translate(2 4)"/>
+      <path d="M 19.0909 2L 0.909091 2C 0.667985 2 0.436754 1.89464 0.266266 1.70711C 0.0957788 1.51957 -3.83153e-08 1.26522 -3.83153e-08 1C -3.83153e-08 0.734784 0.0957788 0.48043 0.266266 0.292894C 0.436754 0.105357 0.667985 1.1178e-08 0.909091 0L 19.0909 0C 19.332 1.1178e-08 19.5632 0.105357 19.7337 0.292894C 19.9042 0.48043 20 0.734784 20 1C 20 1.26522 19.9042 1.51957 19.7337 1.70711C 19.5632 1.89464 19.332 2 19.0909 2Z" transform="translate(2 11)"/>
+      <path d="M 19.0909 2L 0.909091 2C 0.667985 2 0.436754 1.89464 0.266266 1.70711C 0.0957788 1.51957 0 1.26522 0 1C 0 0.734784 0.0957788 0.480429 0.266266 0.292892C 0.436754 0.105356 0.667985 0 0.909091 0L 19.0909 0C 19.332 0 19.5632 0.105356 19.7337 0.292892C 19.9042 0.480429 20 0.734784 20 1C 20 1.26522 19.9042 1.51957 19.7337 1.70711C 19.5632 1.89464 19.332 2 19.0909 2Z" transform="translate(2 18)"/>
+    </svg>
+  </a>
+  <img srcset="./images/2fa_available.png, ./images/2fa_available@2x.png 2x" src="./images/2fa_available@2x.png" alt="Main Art" class="main-art"/>
+  <h1 class="extension-headline">Yipee!<br/>This site has 2FA!</h1>
+  <a href="#" class="cta-btn"><span class="cta-btn__headline">Enable 2FA</span><span class="cta-btn__site-name">for website.com</span></a>
+
+  <a href="#" id="more2faInfoButton" class="methods__info-btn">
+    <svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon expand">
+      <path d="M 19.684 0.333578C 19.2616 -0.0875995 18.5755 -0.0886759 18.1512 0.330618L 9.9926 8.40269L 1.85025 0.315277C 1.42674 -0.105093 0.740669 -0.105093 0.31743 0.315277C -0.10581 0.735917 -0.10581 1.41734 0.31743 1.83771L 9.22497 10.6846C 9.43659 10.8948 9.71405 11 9.99152 11C 10.2682 11 10.5451 10.8953 10.7564 10.6862L 19.6813 1.85574C 20.1051 1.43644 20.1065 0.754756 19.684 0.333578Z" transform="translate(2 7)"/>
+    </svg>
+  </a>
+
+  <div id="methods" class="methods"><span class="methods__title">2FA options available</span>
+    <ul class="methods__list">
+      <li id="sms">
+        <p>SMS</p>
+        <svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon__checkmark methods--checkmark-right-align">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M 5.6 10.6L 1.4 6.4L 0 7.8L 5.6 13.4L 17.6 1.4L 16.2 0L 5.6 10.6Z" transform="translate(3.40002 5.6001)"/>
+        </svg>
+      </li>
+      <li id="phoneCall">
+        <p>Phone Call</p>
+        <svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon__checkmark methods--checkmark-right-align">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M 5.6 10.6L 1.4 6.4L 0 7.8L 5.6 13.4L 17.6 1.4L 16.2 0L 5.6 10.6Z" transform="translate(3.40002 5.6001)"/>
+        </svg>
+      </li>
+      <li id="email">
+        <p>Email</p>
+        <svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon__checkmark methods--checkmark-right-align">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M 5.6 10.6L 1.4 6.4L 0 7.8L 5.6 13.4L 17.6 1.4L 16.2 0L 5.6 10.6Z" transform="translate(3.40002 5.6001)"/>
+        </svg>
+      </li>
+      <li id="software">
+        <p>Software Token</p>
+        <svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon__checkmark methods--checkmark-right-align">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M 5.6 10.6L 1.4 6.4L 0 7.8L 5.6 13.4L 17.6 1.4L 16.2 0L 5.6 10.6Z" transform="translate(3.40002 5.6001)"/>
+        </svg>
+      </li>
+      <li id="hardware">
+        <p>Hardware Token</p>
+        <svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon__checkmark methods--checkmark-right-align">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M 5.6 10.6L 1.4 6.4L 0 7.8L 5.6 13.4L 17.6 1.4L 16.2 0L 5.6 10.6Z" transform="translate(3.40002 5.6001)"/>
+        </svg>
+      </li> 
+    </ul>
+  </div>
+</body>
+
+</html>

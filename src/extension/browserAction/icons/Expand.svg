@@ -1,0 +1,19 @@
+<svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas" fill="none">
+<g id="Icons/Expand" clip-path="url(#clip0)">
+<g id="down_chevron">
+<g id="Vector">
+<path d="M 19.684 0.333578C 19.2616 -0.0875995 18.5755 -0.0886759 18.1512 0.330618L 9.9926 8.40269L 1.85025 0.315277C 1.42674 -0.105093 0.740669 -0.105093 0.31743 0.315277C -0.10581 0.735917 -0.10581 1.41734 0.31743 1.83771L 9.22497 10.6846C 9.43659 10.8948 9.71405 11 9.99152 11C 10.2682 11 10.5451 10.8953 10.7564 10.6862L 19.6813 1.85574C 20.1051 1.43644 20.1065 0.754756 19.684 0.333578Z" transform="translate(2 7)" fill="#69655E"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+
+<clipPath id="clip0">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+
+</defs>
+</svg>
+

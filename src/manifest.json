@@ -23,6 +23,9 @@
   ],
 
   "web_accessible_resources": [
-    "icons/*"
+    "**/*.html",
+    "**/*.css",
+    "**/*.js",
+    "**/*.png"
   ]
 }
