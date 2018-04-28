@@ -5,7 +5,6 @@ module.exports = {
     // Files that need to be transpiled from Typescript
     // to Javascript and included in the extension source.
     background: './src/typescript/background/backgroundScript.ts',
-    content: './src/typescript/content/contentScript.ts',
     popup: './src/typescript/browserAction/popup.ts',
     options: './src/typescript/options/options.ts'
   },

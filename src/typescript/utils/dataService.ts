@@ -1,3 +1,11 @@
+const SKIP_NOTIFICATION: Array<string> = [];
+
+export function shouldShowNotification(site: string) {
+  let shouldSkipNotification = SKIP_NOTIFICATION.includes(site);
+  SKIP_NOTIFICATION.push(site);
+  return !shouldSkipNotification;
+}
+
 export async function loadServiceConfig(url: URL) {
   return TWOFACTORAUTHORG_DATA[url.origin];
 }
