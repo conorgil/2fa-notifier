@@ -6,7 +6,8 @@ module.exports = {
     // to Javascript and included in the extension source.
     background: './src/typescript/background/backgroundScript.ts',
     popup: './src/typescript/browserAction/popup.ts',
-    options: './src/typescript/options/options.ts'
+    options: './src/typescript/options/options.ts',
+    supports2fa: './src/typescript/browserAction/supports2FA.ts'
   },
   output: {
     // This copies each source entry into the folder
