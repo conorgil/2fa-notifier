@@ -23,20 +23,16 @@ export async function processUrl(url: URL) {
 
 function noData(site: string) {
   console.log('No data found for this site: %s', site);
-  // Update the browser action button to indicate
-  // no data found for this domain. Eventually, allow
-  // someone to create an entry for it
+  showBrowserActionIconForNo2faSupport();
 }
 
 function tfaNotSupported(site: string) {
   console.log('%s DOES NOT support 2FA!', site);
-  // Update the browser action button to indicate
-  // that this site does not support 2FA. Allow them
-  // to tweet, etc.
+  showBrowserActionIconForNo2faSupport();
 }
 
-
 function tfaSupported(site: string, config: SERVICE_CONFIG) {
+  showBrowserActionIconFor2faSupport();
   let docsUrl = config.doc;
   let message = '';
 
@@ -56,4 +52,26 @@ function tfaSupported(site: string, config: SERVICE_CONFIG) {
   if (shouldShowNotification(site)) {
     popNotification(options, config);
   }
+}
+
+async function showBrowserActionIconFor2faSupport() {
+  await browser.browserAction.setIcon({
+    path: {
+      '16': 'icons/yes_2fa.png',
+      '32': 'icons/yes_2fa@2x.png',
+      '48': 'icons/yes_2fa@3x.png'
+    }
+  });
+  return;
+}
+
+async function showBrowserActionIconForNo2faSupport() {
+  await browser.browserAction.setIcon({
+    path: {
+      '16': 'icons/no_2fa.png',
+      '32': 'icons/no_2fa@2x.png',
+      '48': 'icons/no_2fa@3x.png'
+    }
+  });
+  return;
 }
