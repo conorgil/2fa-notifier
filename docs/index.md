@@ -29,4 +29,4 @@ and enabling 2FA everywhere you can!
 The source code for the 2FA Notifier extension
 is available in its [Github repo](https://github.com/conorgil/2fa-notifier).
 
-[install]: https://chrome.google.com/webstore/detail/lggnfpepjfjffimehbjeofegcbmhogoj/publish-accepted?authUser=0&hl=en-US
+[install]: https://chrome.google.com/webstore/detail/lggnfpepjfjffimehbjeofegcbmhogoj/
