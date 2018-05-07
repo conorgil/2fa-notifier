@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Updated website to improve copy and link to the
   Chrome Web Store entry.
+- Show the correct site name on the "No 2FA" page
 
 ## [0.2.1] - 2018-04-28
 ### Changed

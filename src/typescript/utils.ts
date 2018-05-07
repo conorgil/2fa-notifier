@@ -27,3 +27,20 @@ export async function getConfigForCurrentTab(): Promise<SERVICE_CONFIG> {
 
   return config;
 }
+
+/**
+ * Look up the current tab and inject the current
+ * hostname into the page on the element with the
+ * given ID.
+ * 
+ * @param id The ID of the span where the current site
+ *           name should be written.
+ */
+export async function showCorrectSiteName(id: string) {
+  let tab = await getCurrentTab();
+  if (!tab) { return; }
+
+  let url = new URL(tab.url);
+  let site = url.hostname;
+  document.getElementById(id).textContent = site;
+}

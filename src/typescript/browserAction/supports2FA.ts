@@ -1,5 +1,5 @@
 import * as $ from 'jquery';
-import { getConfigForCurrentTab, getCurrentTab } from '../utils';
+import { getConfigForCurrentTab, getCurrentTab, showCorrectSiteName } from '../utils';
 
 $(async function () {
   let originalWindowHeight = $(document).height();
@@ -15,7 +15,7 @@ $(async function () {
   });
 
   await showCorrect2faMethods();
-  await showCorrectSiteName();
+  await showCorrectSiteName('siteName');
   await setupCorrectDocLink();
 });
 
@@ -45,15 +45,6 @@ async function showCorrect2faMethods() {
 
 function hide2faMethod(method: string) {
   $(`#${method}`).toggle(false);
-}
-
-async function showCorrectSiteName() {
-  let tab = await getCurrentTab();
-  if (!tab) { return; }
-
-  let url = new URL(tab.url);
-  let site = url.hostname;
-  $('#siteName').text(site);
 }
 
 async function setupCorrectDocLink() {
