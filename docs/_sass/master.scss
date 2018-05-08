@@ -1,0 +1,18 @@
+// abstracts
+@import "abstracts/normalize";
+@import "abstracts/modularscale";
+@import "abstracts/typi/scss/typi";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// base
+@import "base/typography";
+
+// components
+
+// layout
+@import "layout/home";
+
+* {
+  box-sizing: border-box;
+}

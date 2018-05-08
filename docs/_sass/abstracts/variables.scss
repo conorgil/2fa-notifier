@@ -1,0 +1,51 @@
+// Breakpoints
+$breakpoints: ( 
+  s: 320px,
+  m: 600px,
+  l: 720px,
+  xl: 1200px
+);
+
+//colors
+$branded-yellow: #F3CD50;
+$branded-brown: #433E36;
+$highlight-color: #4c70f3;
+$muted-grey-color: #e4e3ed;
+$muted-grey-blue-tinge-color: #9caeb4;
+
+//$large-breakpoint: 64em !default;
+//$medium-breakpoint: 42em !default;
+
+// Headers
+$header-heading-color: #333 !default;
+$header-bg-color: #159957 !default;
+$header-bg-color-secondary: #155799 !default;
+
+// Footers
+$footer-bg-color: $muted-grey-color !default;
+
+// Text
+$section-headings-color: $branded-brown !default;
+$body-text-color: $branded-brown !default;
+$body-link-color: $highlight-color !default;
+$blockquote-text-color: $branded-brown !default;
+$caption-text-color: $branded-brown !default;
+$project-info-display-text-color: $branded-brown !default;
+$muted-display-text-color: $muted-grey-blue-tinge-color;
+
+// Code
+$code-bg-color: #f3f6fa !default;
+$code-text-color: #567482 !default;
+
+// Borders
+$border-color: #dce6f0 !default;
+$table-border-color: #e9ebec !default;
+$hr-border-color: #eff0f1 !default;
+
+// Divider line styles
+//$1px-line: solid 1px $hr-border-color;
+
+// Fonts
+$display-font-stack: "Rubik", Helvetica, Arial, sans-serif;
+$body-font-stack: "Rubik", Helvetica, Arial, sans-serif;
+$code-font-stack: Consolas, "Liberation Mono", Menlo, Courier, monospace;

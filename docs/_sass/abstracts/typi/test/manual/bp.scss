@@ -1,0 +1,53 @@
+@import 'scss/typi';
+@import 'mappy-breakpoints/mappy-breakpoints';
+@import 'compass-breakpoint/stylesheets/breakpoint';
+@import 'sass-mq/mq';
+
+$breakpoints: (
+  small: 400px,
+  med: 600px,
+  large: 800px,
+);
+
+$mq-breakpoints: (
+  small: 400px,
+  med: 600px,
+  large: 800px,
+);
+
+$typi: (
+  base: (
+    null: (18px, 1.5),
+    small: 20px,
+    med: 22px,
+    large: (24px, 1.6)
+  ),
+  h1: (
+    null: (24px, 1.3),
+    med: 30px,
+    large: (3em)
+  )
+);
+
+/* Test with normal breakpoints */
+.h1 {
+  @include typi(h1);
+}
+
+/* Test with mappy bp */
+$typi-breakpoint: mappy-bp;
+.h1 {
+  @include typi('h1')
+}
+
+/* Test with breakpoint-sass */
+$typi-breakpoint: breakpoint;
+.h1 {
+ @include typi(h1);
+}
+
+/* Test with sass-mq */
+$typi-breakpoint: mq;
+.h1 {
+ @include typi(h1);
+}
