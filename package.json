@@ -10,7 +10,7 @@
     "ff": "web-ext run -s src/extension",
     "typescript": "tsc",
     "prerelease": "npm run build",
-    "release": "cd src/extension && zip -r ../releases/2FAN_NEXT.zip *",
+    "release": "cd src/extension && zip -r ../../releases/2FAN_NEXT.zip *",
     "test": "npm run test-ts && npm run test-js",
     "test-ts": "mocha --require ts-node/register src/**/*.test.ts",
     "test-js": "mocha src/**/*.test.js"
