@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Changed
 - Improved cleanliness of data
+- Reworded button text from "Enable 2FA" to "Show 2FA Guide"
 
 ## [0.2.2]
 ### Added
