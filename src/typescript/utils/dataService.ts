@@ -530,7 +530,7 @@ const TWOFACTORAUTHORG_DATA: ORIGIN_TO_SERVICE_CONFIG = {
     "sms": true,
     "phone": true,
     "email": true,
-    "doc": "/notes/chase/"
+    "doc": "https://twofactorauth.org/notes/chase/"
   },
   "https://www.chimebank.com": {
     "name": "Chime",
@@ -3172,7 +3172,7 @@ const TWOFACTORAUTHORG_DATA: ORIGIN_TO_SERVICE_CONFIG = {
     "img": "internetbs.png",
     "tfa": true,
     "software": true,
-    "doc": "/notes/internetbs/"
+    "doc": "https://twofactorauth.org/notes/internetbs/"
   },
   "https://www.inwx.com": {
     "name": "INWX",
@@ -3832,9 +3832,9 @@ const TWOFACTORAUTHORG_DATA: ORIGIN_TO_SERVICE_CONFIG = {
     "tfa": false,
     "facebook": "freenet"
   },
-  "https://gmail.com": {
+  "https://mail.google.com": {
     "name": "Gmail",
-    "url": "https://gmail.com",
+    "url": "https://mail.google.com",
     "img": "gmail.png",
     "tfa": true,
     "sms": true,
@@ -4818,7 +4818,7 @@ const TWOFACTORAUTHORG_DATA: ORIGIN_TO_SERVICE_CONFIG = {
     "img": "gree.png",
     "tfa": true,
     "software": true,
-    "doc": "/notes/gree/"
+    "doc": "https://twofactorauth.org/notes/gree/"
   },
   "https://www.guildwars2.com": {
     "name": "Guild Wars 2",
@@ -5987,7 +5987,7 @@ const TWOFACTORAUTHORG_DATA: ORIGIN_TO_SERVICE_CONFIG = {
     "tfa": true,
     "software": true,
     "hardware": true,
-    "doc": "/notes/schwab/"
+    "doc": "https://twofactorauth.org/notes/schwab/"
   },
   "https://www.colfinancial.com": {
     "name": "COL Financial",
@@ -6015,7 +6015,7 @@ const TWOFACTORAUTHORG_DATA: ORIGIN_TO_SERVICE_CONFIG = {
     "exceptions": {
       "text": "Only available for some account types"
     },
-    "doc": "/notes/fidelity/"
+    "doc": "https://twofactorauth.org/notes/fidelity/"
   },
   "https://www.flatex.de": {
     "name": "Flatex",
@@ -8013,9 +8013,9 @@ const TWOFACTORAUTHORG_DATA: ORIGIN_TO_SERVICE_CONFIG = {
     "sms": true,
     "doc": "https://help.instagram.com/566810106808145"
   },
-  "https://linkedin.com": {
+  "https://www.linkedin.com": {
     "name": "LinkedIn",
-    "url": "https://linkedin.com",
+    "url": "https://www.linkedin.com",
     "img": "linkedin.png",
     "tfa": true,
     "sms": true,
