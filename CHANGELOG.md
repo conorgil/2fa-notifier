@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.3.1]
 ### Changed
 - Updated action bar icons to be have more clarity
 - Updated notification icon to have more clarity
@@ -41,7 +43,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [0.1.0] - 2018-04-09
 Initial release
 
-[Unreleased]: https://github.com/conorgil/2fa-notifier/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/conorgil/2fa-notifier/compare/v0.3.1...HEAD
+[0.3.0]: https://github.com/conorgil/2fa-notifier/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/conorgil/2fa-notifier/compare/v0.2.2...v0.3.0
 [0.2.2]: https://github.com/conorgil/2fa-notifier/compare/v0.2.1...v0.2.2
 [0.2.1]: https://github.com/conorgil/2fa-notifier/compare/v0.2.0...v0.2.1
