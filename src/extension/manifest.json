@@ -22,6 +22,11 @@
     }
   },
 
+  "icons": {
+    "48": "icons/app_icon_48.png",
+    "128": "icons/app_icon_128.png"
+  },
+
   "permissions": [
     "storage",
     "tabs",
