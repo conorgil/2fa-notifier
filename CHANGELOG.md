@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Added Google Analytics to the homepage of the website.
 
+### Fixed
+- Typos on the website homepage.
+
 ## [0.4.0]
 ### Changed
 - Updated notification icon to have an 8px padding to look better on Windows 10 notifications
