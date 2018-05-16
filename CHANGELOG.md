@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 - Added Google Analytics to the homepage of the website.
+- Added data entry for www.google.com.
 
 ### Fixed
 - Typos on the website homepage.
