@@ -19,7 +19,7 @@ export async function loadServiceConfig(url: URL) {
 export interface SERVICE_CONFIG {
   name: string;
   url: string;
-  img: string;
+  img?: string;
   tfa: boolean;
   software?: boolean;
   hardware?: boolean;
@@ -145,6 +145,16 @@ const TWOFACTORAUTHORG_DATA: ORIGIN_TO_SERVICE_CONFIG = {
     "name": "Google Drive",
     "url": "https://drive.google.com",
     "img": "drive.png",
+    "tfa": true,
+    "sms": true,
+    "phone": true,
+    "software": true,
+    "hardware": true,
+    "doc": "https://www.google.com/intl/en-US/landing/2step/features.html"
+  },
+  "https://www.google.com": {
+    "name": "Google",
+    "url": "https://www.google.com",
     "tfa": true,
     "sms": true,
     "phone": true,
