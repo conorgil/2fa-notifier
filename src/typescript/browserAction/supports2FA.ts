@@ -49,7 +49,16 @@ function hide2faMethod(method: string) {
 
 async function setupCorrectDocLink() {
   let config = await getConfigForCurrentTab();
-  if (!config) { return; }
+  if (!config) {
+    return;
+  }
 
-  $('#cta-btn').attr('href', config.doc);
+  if (config.doc) {
+    $('#cta-btn').attr('href', config.doc);
+    return;
+  }
+
+  await showCorrectSiteName('nameOfSiteWith2faAndNoDocs');
+  $('#cta-btn').toggle(false);
+  $('#missingDocs').toggle();
 }

@@ -6,8 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Changed
-- updated notification icon to have an 8px padding to look better on Windows 10 notifications
+- Updated notification icon to have an 8px padding to look better on Windows 10 notifications
 
+## Fixed
+- Updated browser action popup to handle the case where a site supports
+  2FA, but does not have any documentation.
 
 ## [0.3.2]
 ### Added

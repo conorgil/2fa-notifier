@@ -244,3 +244,14 @@ svg {
 .temporary-hide {
   display: none !important;
 }
+
+.missing-docs {
+  display: none;
+  margin: 0.25rem 0;
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+
+  align-self: center;
+}
