@@ -7937,9 +7937,9 @@ const TWOFACTORAUTHORG_DATA: ORIGIN_TO_SERVICE_CONFIG = {
     "img": "ello.png",
     "tfa": false
   },
-  "https://facebook.com": {
+  "https://www.facebook.com": {
     "name": "Facebook",
-    "url": "https://facebook.com",
+    "url": "https://www.facebook.com",
     "img": "facebook.png",
     "tfa": true,
     "sms": true,
