@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Added button to the 2FA Notifier add-on in the Firefox store.
 
+### Fixed
+- Fixed the link for the menu top level back arrow [[67]]
+
 ## [0.5.0]
 ### Changed
 - Cleaned data for Facebook so that notifications work as expected. 
@@ -78,3 +81,5 @@ Initial release
 [0.2.1]: https://github.com/conorgil/2fa-notifier/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/conorgil/2fa-notifier/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/conorgil/2fa-notifier/releases/tag/v0.1.0
+
+[67]: https://github.com/conorgil/2fa-notifier/issues/67
