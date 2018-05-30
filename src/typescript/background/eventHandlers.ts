@@ -26,6 +26,12 @@ export function handleRuntimeInstalledEvent(details: any) {
 
 function handleExtensionInstalledEvent(details: any) {
   console.log('[background_script:handleExtensionInstalled] Details = %O', details);
+
+  // TODO move hard coded domain into a config file so
+  // that local testing can replace the value with localhost.
+  browser.tabs.create({
+    url: "https://2fanotifier.org/onboarding.html"
+  });
 }
 
 function handleExtensionUpdatedEvent(details: any) {
