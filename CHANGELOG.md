@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 - Fixed the link for the menu top level back arrow [[67]]
+- Homepage centering
+- Onboarding page logo link to homepage
 
 ## [0.5.0]
 ### Changed

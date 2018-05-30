@@ -1,5 +1,18 @@
 .onboarding-logo{
-  opacity: 0.4;
+  color: inherit;
+
+  a {
+    text-decoration: none;
+    opacity: 0.4;
+    transition: 300ms;
+  }
+  a:visited {
+    color: inherit;
+  }
+  a:hover {
+    opacity: 0.6;
+    transition: 300ms;
+  }
 }
 
 .onboarding-tutorial__installed-text{

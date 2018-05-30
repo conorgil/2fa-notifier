@@ -5,7 +5,7 @@
 layout: home
 ---
 
-<h1 class="nav-header">2FA Notifier</h1>
+<h1 class="logo-text">2FA Notifier</h1>
 
 Two-Factor Authentication (2FA) is a fantastic way to make it harder for hackers to hijack your accounts, even if they somehow steal your password.
 
