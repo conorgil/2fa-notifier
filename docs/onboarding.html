@@ -1,0 +1,46 @@
+---
+
+---
+
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+  {% include head.html %}
+
+  <body class="onboarding-container">
+    
+    <header>
+      <h1 class="logo-text onboarding-logo">2FA Notifier</h1>
+      <div class="onboarding-tutorial__installed-text">Installed! Here’s a quick tutorial.</div>
+    </header>
+
+    <main>
+      <section class="onboarding-tutorial">
+        <div class="onboarding-tutorial__image">
+          <img src="/assets/illustrated_browser.svg">
+          <img src="/assets/illustrated_notification.svg" class="onboarding-tutorial__image--notification ">
+        </div>
+        <div class="onboarding-tutorial__text">
+          <h2>Notifications appear when you visit sites that support 2FA</h2>
+          <p>Clicking on the notification will bring you to a 2FA guide for that website. Otherwise, you can ignore or close the notification. </p>
+        </div>
+      </section>
+
+      <section class="onboarding-tutorial">
+        <div class="onboarding-tutorial__image">
+          <img src="/assets/illustrated_browser.svg">
+          <img src="/assets/illustrated_icon_notification.svg" class="onboarding-tutorial__image--explanation">
+        </div>
+        <div class="onboarding-tutorial__text">
+          <h2>2FA Notifier icon changes to indicate 2FA support</h2>
+          <p>Clicking on the 2FA Notifier icon reveals additional information about the current website. If 2FA is supported, you'll get a direct link to the 2FA guide.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+  </body>
+</html>

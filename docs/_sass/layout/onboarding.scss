@@ -1,0 +1,126 @@
+.onboarding-logo{
+  opacity: 0.4;
+}
+
+.onboarding-tutorial__installed-text{
+  font-size: ms(1);
+  opacity: 0.8;
+}
+
+.onboarding-tutorial {
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-gap: 0.5rem;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  padding-top: 2rem;
+
+  @include max-respond-to(m){
+    grid-template-rows: auto;
+  }
+}
+
+.onboarding-tutorial__text {
+  //background-color: #ffffff;
+  grid-column-start: 8;
+  grid-column-end: 13;
+  grid-row: 1 / 2;
+  padding-left: 2rem;
+  
+  @include max-respond-to(l){
+    grid-column-start: 7;
+  }
+  
+  @include max-respond-to(m){
+    grid-row: 2;
+    grid-column-start: 1;
+    padding-right: 2rem;
+  }
+
+}
+
+.onboarding-tutorial__image {
+  //background-color: #ffffff;
+  grid-column-start: 1;
+  grid-column-end: 8;
+  grid-row: 1 / 2;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  @include max-respond-to(l){
+    position: absolute;
+    right: 20%;
+    width: 500px;
+  }
+
+  @include max-respond-to(m){
+    position: relative;
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row: 1 / 2;
+    right: unset;
+    width: unset;
+  }
+}
+
+.onboarding-tutorial__image--notification {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  //transform: translateX(25rem);
+
+  animation-name: notify;
+  animation-duration: 3.5s; 
+  animation-timing-function: cubic-bezier(0.2,1,0.3,1);
+  animation-direction: alternate; 
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+@keyframes notify {
+  0%, 90% {
+    transform: translateX(0rem); 
+  }
+  100% {
+    transform: translateX(25rem);
+  }
+}/**/
+
+.onboarding-tutorial__image--explanation {
+  position: absolute;
+  top: 1.7rem;
+  right: -1.25rem;
+  opacity: 0;
+
+  animation-name: showicon;
+  animation-duration: 4s; 
+  animation-timing-function: cubic-bezier(0.2,1,0.3,1);
+  animation-direction: alternate; 
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-delay: 2s;
+}
+
+@keyframes showicon {
+  0% {
+    opacity: 0;
+    
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1rem);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(0rem);
+  } 
+  100% {
+    
+    opacity: 1;
+    transform: scale(0rem);
+  }
+}
+

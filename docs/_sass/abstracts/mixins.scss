@@ -10,7 +10,7 @@
       }
   }
    
-  @warn "Unknown `#{$breakpoint}` in $breakpoints";
+  //@warn "Unknown `#{$breakpoint}` in $breakpoints";
 }
 
 @mixin max-respond-to($breakpoint) {
@@ -22,5 +22,5 @@
       }
   }
    
-  @warn "Unknown `#{$breakpoint}` in $breakpoints";
+  //@warn "Unknown `#{$breakpoint}` in $breakpoints";
 }

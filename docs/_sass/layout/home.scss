@@ -6,14 +6,21 @@ body {
   background-color: $branded-yellow;
   height: 100%;
   //overflow: hidden;
-}
-
-.main-content {
   word-wrap: break-word;
-  max-width: 36rem;
+  max-width: 64rem;
   margin: 0rem auto;
   color: $branded-brown;
   padding: 1rem 2rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.main-content {
+  max-width: 36rem;
 
  /* @include respond-to(xl) {
     margin-left: 7vw;
@@ -41,9 +48,12 @@ body {
 
 }  
 
-.header-content {
+
+.logo-text {
   font-weight: 900;
   text-transform: uppercase;
+  font-size: ms(1);
+  margin-bottom: 0rem;
 }
 
 .nav-header {

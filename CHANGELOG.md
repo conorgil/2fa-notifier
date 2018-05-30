@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - Added button to the 2FA Notifier add-on in the Firefox store.
+- Onboarding page designed and built
 
 ### Fixed
 - Fixed the link for the menu top level back arrow [[67]]
