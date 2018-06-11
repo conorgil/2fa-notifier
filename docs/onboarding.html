@@ -1,5 +1,5 @@
 ---
-
+# Empty yaml front matter section.
 ---
 
 <!DOCTYPE html>
@@ -10,15 +10,17 @@
   <body class="onboarding-container">
     
     <header>
-      <h1 class="logo-text onboarding-logo"><a href="{{ site.url }}">2FA Notifier</a></h1>
-      <div class="onboarding-tutorial__installed-text">Installed! Here’s a quick tutorial.</div>
+      <div class="standard-container">
+        <h1 class="logo-text onboarding-logo"><a href="{{ site.url }}">2FA Notifier</a></h1>
+        <div class="onboarding-tutorial__installed-text">Installed! Here’s a quick tutorial.</div>
+      </div>
     </header>
 
     <main>
-      <section class="onboarding-tutorial">
+      <section class="standard-container onboarding-tutorial">
         <div class="onboarding-tutorial__image">
-          <img src="/assets/illustrated_browser.svg">
-          <img src="/assets/illustrated_notification.svg" class="onboarding-tutorial__image--notification ">
+          <img src="/assets/illustrated_browser.svg" alt="abstract image of browser">
+          <img src="/assets/illustrated_notification.svg" class="onboarding-tutorial__image--notification " alt="abstract image of system notification popping in and out">
         </div>
         <div class="onboarding-tutorial__text">
           <h2>Notifications appear when you visit sites that support 2FA</h2>
@@ -26,10 +28,10 @@
         </div>
       </section>
 
-      <section class="onboarding-tutorial">
+      <section class="standard-container onboarding-tutorial">
         <div class="onboarding-tutorial__image">
-          <img src="/assets/illustrated_browser.svg">
-          <img src="/assets/illustrated_icon_notification.svg" class="onboarding-tutorial__image--explanation">
+          <img src="/assets/illustrated_browser.svg" alt="abstract image of browser">
+          <img src="/assets/illustrated_icon_notification.svg" class="onboarding-tutorial__image--explanation" alt="a grey 2FA notifier icon signifies no 2FA support. A Green 2FA notifier icon signifies 2FA support available.">
         </div>
         <div class="onboarding-tutorial__text">
           <h2>2FA Notifier icon changes to indicate 2FA support</h2>

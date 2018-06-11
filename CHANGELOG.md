@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added button to the 2FA Notifier add-on in the Firefox store.
 - On-boarding page designed and built
 - Automatically opens `/onboarding.html` in a new tab after initial extension install.
+- Built out Home page to include nifty illustrations 
 
 ### Fixed
 - Fixed the link for the menu top level back arrow [[67]]

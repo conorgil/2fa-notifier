@@ -24,6 +24,9 @@ url: "https://2fanotifier.org/" # the base hostname & protocol for your site, e.
 twitter_username: 
 github_username:  conorgil
 
+conor_personal_url: https://twitter.com/conorgil
+ray_personal_url: https://ray-gonzales.com
+
 # Build settings
 markdown: kramdown
 theme: minima

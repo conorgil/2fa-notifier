@@ -1,0 +1,84 @@
+---
+# Empty yaml front matter section.
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+  {% include head.html %}
+
+  <body>
+    
+    <header>
+      <div class="standard-container">
+        <h1 class="logo-text"><a href="{{ site.url }}">2FA Notifier</a></h1>
+      </div>
+    </header>
+
+    <main>
+      <section class="standard-container home__section">
+        <div class="home__art home__art--main-art">
+          <img src="/assets/main_art.svg" alt="Primary illustration of extension dropdown" class="home__art--main-art"/>
+        </div>
+        <div class="home__description">
+          <h1>Get notified when the websites you visit offer two-factor authentication (2FA)</h1>
+          <a href="https://chrome.google.com/webstore/detail/lggnfpepjfjffimehbjeofegcbmhogoj" alt="Install for Chrome" class="cta-btn">
+            <div class="install-btn-container">
+              <img src="/assets/chrome.png"  srcset="/assets/chrome.png, /assets/chrome@2x.png 2x" alt="Chrome browser icon" />
+              Install <br>for Chrome
+            </div>
+          </a>
+          <a href="https://addons.mozilla.org/en-US/firefox/addon/2fa-notifier/" alt="Install for Chrome" class="cta-btn">
+            <div class="install-btn-container">
+              <img src="/assets/firefox.png" srcset="/assets/firefox.png, /assets/firefox@2x.png 2x" alt="Firefox browser icon" />
+              Install <br>for Firefox
+            </div>
+          </a>
+        </div>
+        <svg class="curved-bg--beige" viewBox="0 0 1280 116" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 115.635C373.5 115.635 916 102.495 1280 0V115.635H0Z" transform="translate(1280 116) rotate(180)"/>
+        </svg>
+      </section>
+
+      <section class="standard-container home__section home__section--reverse-order bgcolor--beige">
+        <svg class="curved-bg--beige-lighter" viewBox="0 0 1280 116" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 115.635C373.5 115.635 916 102.495 1280 0V115.635H0Z" transform="translate(1280 116) rotate(180)"/>
+        </svg>
+        <div class="home__art">
+          <img src="/assets/scare_hackers.svg" alt="Illustration of a personified browser and smartphone scaring a cartoonized hacker." />
+        </div>
+        <div class="home__description">
+          <h2>2FA helps to keep hackers at bay</h2>
+          <p>Passwords can be digitally stolen. But to steal a phone requires physical exertion. This is what gives you that extra layer of protection. While a hacker can comfortably sit at home to steal your password, getting your phone requires a lot more effort. <br/><br/> 
+
+            Do your part! Piss off a hacker and add some extra security to all your accounts -  enable 2FA!</p>
+        </div>
+      </section>
+
+      <section class="standard-container home__section bgcolor--beige-light">
+        <div class="home__art">
+          <img src="/assets/how_it_works.svg" alt="Illustration of a personified browser and smartphone checking a browser URL against their list of 2FA supported websites." />
+        </div>
+        <div class="home__description">
+          <h2>How does it work?</h2>
+          <p>2FA Notifier simply compares the website you are visiting to a list of known 2FA capable websites provided by <a href="https://twofactorauth.org/">twofactorauth.org</a>. If the website is in our list, we notify you to enable 2FA. </p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="bgcolor--beige-light">
+      <div class="standard-container footer__container">
+        <section class="footer__about">
+          <h3 class="footer__header">About</h3>
+          <p class="footer__description">2FAN is an open source project built by <a href="{{ site.conor_personal_url }}">Conor</a> and <a href="{{ site.ray_personal_url }}">Ray</a>. Our goal is to make the web a safer place for everyone. This project uses data from another open source project <a href="https://twofactorauth.org/">twofactorauth.org.</a></p>
+        </section>
+
+        <section class="footer__feedback">
+          <h3 class="footer__header">Feedback</h3>
+          <p class="footer__description">Curious about the extension? Have ideas about how it can be better? We’d love to hear from you! <a href="https://github.com/conorgil/2fa-notifier/issues">Create a Github issue with your idea here.</a></p>
+        </section>
+      </div>
+    </footer>
+
+  </body>
+</html>
