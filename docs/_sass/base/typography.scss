@@ -32,7 +32,8 @@ $typi: (
     null: (2, 1.2),
     s: (2, 1.2),
     m: (2, 1.2),
-    l: (2, 1.2)
+    l: (2, 1.2),
+    xl: (2, 1.2)
   ),
   h4: (
     null: (1, 1.25),
@@ -82,10 +83,6 @@ html, body {
 
   /* Non standard for WebKit */
   //word-break: break-word;
-
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
   
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

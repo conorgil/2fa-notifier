@@ -10,11 +10,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - On-boarding page designed and built
 - Automatically opens `/onboarding.html` in a new tab after initial extension install.
 - Built out Home page to include nifty illustrations 
+- Added favicon
 
 ### Fixed
 - Fixed the link for the menu top level back arrow [[67]]
 - Homepage centering
 - Onboarding page logo link to homepage
+- Fixed aggressive hyphening and typographic orphans
 
 ## [0.5.0]
 ### Changed
