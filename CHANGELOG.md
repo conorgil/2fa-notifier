@@ -6,17 +6,26 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
+- Built out Home page to include nifty illustrations 
+- Added favicon
+- Allow user to indicate that they have already enabled 2FA
+  on the current site so that they stop getting notifications
+  on that site.
+- Reduce notification frequency to at most 1/site/24 hours.
+
+### Fixed
+- Fixed aggressive hyphening and typographic orphans
+
+## [0.6.0]
+### Added
 - Added button to the 2FA Notifier add-on in the Firefox store.
 - On-boarding page designed and built
 - Automatically opens `/onboarding.html` in a new tab after initial extension install.
-- Built out Home page to include nifty illustrations 
-- Added favicon
 
 ### Fixed
 - Fixed the link for the menu top level back arrow [[67]]
 - Homepage centering
 - Onboarding page logo link to homepage
-- Fixed aggressive hyphening and typographic orphans
 
 ## [0.5.0]
 ### Changed

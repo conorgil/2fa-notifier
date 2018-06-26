@@ -1,13 +1,12 @@
 import { browser } from 'webextension-polyfill-ts';
 import { SERVICE_CONFIG } from '../utils/dataService';
+import { StorageService } from '../utils/storageService';
 
 type NOTIFICATION_CONTEXT = SERVICE_CONFIG;
 
 const NOTIFICATION_ID_TO_CONTEXT: { [notificationId: string]: NOTIFICATION_CONTEXT } = {};
 
-export async function popNotification(options: { title: string; message: string; }, config: NOTIFICATION_CONTEXT) {
-  let url = new URL(config.url);
-  
+export async function popNotification(site: string, options: { title: string; message: string; }, config: NOTIFICATION_CONTEXT) {
   let notificationId = await browser.notifications.create(
     {
       type: 'basic',
@@ -20,6 +19,10 @@ export async function popNotification(options: { title: string; message: string;
 
   NOTIFICATION_ID_TO_CONTEXT[notificationId] = config;
   console.log('notification id = %s', notificationId);
+
+  let settings = await StorageService.getOrCreateSiteSettings(site) || {};
+  settings.previousNotificationTimestamp = new Date().toISOString();
+  await StorageService.setSiteSettings(site, settings);
 }
 
 browser.notifications.onClicked.addListener(function onNotificationClicked(notificationId) {

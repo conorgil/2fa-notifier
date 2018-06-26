@@ -1,6 +1,10 @@
 import { browser, Tabs } from "webextension-polyfill-ts";
 import { SERVICE_CONFIG, loadServiceConfig } from "./utils/dataService";
 
+/**
+ * Return the active tab in the current window, or null
+ * if it is undefined.
+ */
 export async function getCurrentTab(): Promise<Tabs.Tab> {
   let tabs = await browser.tabs.query({
     active: true,
@@ -13,6 +17,10 @@ export async function getCurrentTab(): Promise<Tabs.Tab> {
   return null;
 }
 
+/**
+ * Return the 2FA configuration data for the origin loaded
+ * in the current tab, or null if it is undefined.
+ */
 export async function getConfigForCurrentTab(): Promise<SERVICE_CONFIG> {
   let currentTab = await getCurrentTab();
   if (!currentTab) {

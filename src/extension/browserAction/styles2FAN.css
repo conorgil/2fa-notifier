@@ -255,3 +255,17 @@ svg {
 
   align-self: center;
 }
+
+.alreadyEnabled2fa {
+  margin: 0.25rem 0;
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: center;
+  text-decoration: underline;
+
+  align-self: center;
+}
+
+.alreadyEnabled2fa:visited {
+  color: inherit;
+}
