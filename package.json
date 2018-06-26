@@ -1,6 +1,6 @@
 {
   "name": "2FA_Notifier",
-  "version": "v0.6.0",
+  "version": "v0.7.0",
   "scripts": {
     "clean": "rm -rf src/extension/generatedJS/*",
     "prebuild": "npm run clean",
