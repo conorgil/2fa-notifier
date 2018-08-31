@@ -8,7 +8,7 @@ module.exports = {
     popup: './src/typescript/browserAction/popup.ts',
     confirmation: './src/typescript/browserAction/confirmation.ts',
     options: './src/typescript/options/options.ts',
-    supports2fa: './src/typescript/browserAction/supports2FA.ts'
+    supports2FA: './src/typescript/browserAction/supports2FA.ts'
   },
   output: {
     // This copies each source entry into the folder

@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.7.1]
+### Fixed
+- Small fixes and cleanup to html pages
+- Fixes the capitalization on the generated file
+  from supports2fa.html to supports2FA.html
+
 ## [0.7.0]
 ### Added
 - Built out Home page to include nifty illustrations 
@@ -89,7 +95,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [0.1.0] - 2018-04-09
 Initial release
 
-[Unreleased]: https://github.com/conorgil/2fa-notifier/compare/v0.7.0...HEAD
+[Unreleased]: https://github.com/conorgil/2fa-notifier/compare/v0.7.1...HEAD
+[0.7.1]: https://github.com/conorgil/2fa-notifier/compare/v0.7.0...v0.7.1
 [0.7.0]: https://github.com/conorgil/2fa-notifier/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/conorgil/2fa-notifier/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/conorgil/2fa-notifier/compare/v0.4.0...v0.5.0
