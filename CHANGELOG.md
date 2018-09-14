@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.7.2]
 ### Fixed
 - Eliminates duplicate notifications when visiting
   a site that support 2FA.
@@ -98,7 +100,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [0.1.0] - 2018-04-09
 Initial release
 
-[Unreleased]: https://github.com/conorgil/2fa-notifier/compare/v0.7.1...HEAD
+[Unreleased]: https://github.com/conorgil/2fa-notifier/compare/v0.7.2...HEAD
+[0.7.2]: https://github.com/conorgil/2fa-notifier/compare/v0.7.1...v0.7.2
 [0.7.1]: https://github.com/conorgil/2fa-notifier/compare/v0.7.0...v0.7.1
 [0.7.0]: https://github.com/conorgil/2fa-notifier/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/conorgil/2fa-notifier/compare/v0.5.0...v0.6.0
