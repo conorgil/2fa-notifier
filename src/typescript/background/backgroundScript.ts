@@ -1,18 +1,27 @@
-import { browser } from 'webextension-polyfill-ts';
+import { browser, Tabs } from 'webextension-polyfill-ts';
 import { handleRuntimeInstalledEvent } from './eventHandlers';
 import { processUrl } from './logic';
 import { getCurrentTab } from '../utils';
 
-browser.tabs.onUpdated.addListener(processCurrentTab);
-browser.tabs.onActivated.addListener(processCurrentTab);
+const STATUS_COMPLETE = 'complete';
 
-async function processCurrentTab() {
+browser.tabs.onUpdated.addListener(async function (tabId: number, changeInfo: Tabs.OnUpdatedChangeInfoType, tab: Tabs.Tab) {
   let currentTab = await getCurrentTab();
-
-  if (currentTab) {
-    let url = new URL(currentTab.url);
-    processUrl(url);
+  if (tabId === currentTab.id && changeInfo.status === STATUS_COMPLETE) {
+    console.log('[background_script:tabs.onUpdated] tab %d status complete', tabId);
+    processTab(currentTab);
   }
+});
+
+browser.tabs.onActivated.addListener(async function(activeInfo: Tabs.OnActivatedActiveInfoType) {
+  let currentTab = await getCurrentTab();
+  console.log('[background_script:tabs.onActivated] tab %d activated', currentTab.id);
+  processTab(currentTab);
+});
+
+function processTab(tab: Tabs.Tab) {
+  let url = new URL(tab.url);
+  processUrl(url); 
 }
 
 browser.runtime.onInstalled.addListener(handleRuntimeInstalledEvent);
