@@ -1,12 +1,11 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="normalize.css">  
   <link rel="stylesheet" href="styles2FAN.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,400,700">
-  <script type="text/javascript" src="../generatedJS/confirmation.bundle.js"></script>
+  <script src="../generatedJS/previouslyEnabled2FA.bundle.js"></script>
 </head>
 
 <body>
@@ -18,14 +17,15 @@
     </svg>
   </a>
   <img srcset="./images/well_done.png, ./images/well_done@2x.png 2x" src="./images/well_done@2x.png" alt="Well Done Art" class="main-art"/>
-  <h1 class="extension-headline">Nice!</h1>
+  <h1 class="extension-headline">All good here</h1>
   <div>
     <p class="extension__body-text">
-      Just like that, you've pissed off a hacker. Well done!
+      You've enabled 2FA for <br/>
+      <span id="siteName" class="extension__body-text--bold">website.com</span>.
     </p>
     <p class="extension__body-text">
-      We'll stop bugging you with reminders for <br/>
-      <span id="siteName" class="extension__body-text--bold">website.com</span>.
+      But, in case you need it, here is 
+      <a href="#" target="_blank" id="docLink">the 2FA guide</a>.
     </p>
   </div>
 </body>

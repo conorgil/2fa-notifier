@@ -135,6 +135,10 @@ svg {
   text-align: center;
 }
 
+.extension__body-text--bold {
+  font-weight: 600;
+}
+
 .extension__list {
   font-size: 0.8125rem;
   padding-left: 1rem;

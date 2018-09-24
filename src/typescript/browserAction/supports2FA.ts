@@ -29,7 +29,6 @@ $(async function () {
 
   await showCorrect2faMethods();
   await showCorrectSiteName('siteName');
-  await showCorrectSiteName('siteName2');
   await setupCorrectDocLink();
 });
 

@@ -1,5 +1,6 @@
 import { browser, Tabs } from "webextension-polyfill-ts";
 import { SERVICE_CONFIG, loadServiceConfig } from "./utils/dataService";
+import { StorageService } from "./utils/storageService";
 
 /**
  * Return the active tab in the current window, or null
@@ -51,4 +52,22 @@ export async function showCorrectSiteName(id: string) {
   let url = new URL(tab.url);
   let site = url.hostname;
   document.getElementById(id).textContent = site;
+}
+
+/**
+ * Returns true if the user has previously indicated that they
+ * have already enabled 2FA on the given hostname.
+ * 
+ * @param site The hostname of the current site
+ */
+// TODO: Change site from string to URL so that callers do not
+//       need to guess which string value to pass in.
+//       "Is is the hostname? origin? something else?"
+export async function userAlreadyEnabled2faOnSite(site: string): Promise<boolean> {
+  let originSettings = await StorageService.getOrCreateSiteSettings(site); 
+  if (originSettings.is2faEnabled) {
+    console.log('[shouldShowNotification] User already enabled 2FA for %s', site);
+    return true;
+  }
+  return false;
 }

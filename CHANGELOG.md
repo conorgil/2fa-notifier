@@ -5,6 +5,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Update browser action menu to show a custom
+  page if the user has indicated that they have
+  already enabled 2FA.
+
+### Changed
+- Update confirmation page shown after a user
+  initially indicates that they enabled 2FA
+  to improve text and include illustration.
 
 ## [0.7.2]
 ### Fixed

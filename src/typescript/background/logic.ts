@@ -2,6 +2,7 @@ import { browser } from 'webextension-polyfill-ts';
 import { popNotification } from './notifications';
 import { loadServiceConfig, SERVICE_CONFIG } from '../utils/dataService';
 import { StorageService } from '../utils/storageService';
+import { userAlreadyEnabled2faOnSite } from '../utils';
 
 const DAY_IN_MILLISECONDS = 1000 * 60 * 60 * 24;
 
@@ -97,20 +98,6 @@ export async function shouldShowNotification(site: string) {
   }
 
   return true;
-}
-
-/**
- * Returns true if the user has previously indicated that they
- * have already enabled 2FA on the given origin.
- * 
- */
-async function userAlreadyEnabled2faOnSite(site: string): Promise<boolean> {
-  let originSettings = await StorageService.getOrCreateSiteSettings(site); 
-  if (originSettings.is2faEnabled) {
-    console.log('[shouldShowNotification] User already enabled 2FA for %s', site);
-    return true;
-  }
-  return false;
 }
 
 /**

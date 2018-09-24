@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="normalize.css">  
   <link rel="stylesheet" href="styles2FAN.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,400,700">
-  <script type="text/javascript" src="../generatedJS/confirmation.bundle.js"></script>
+  <script type="text/javascript" src="../generatedJS/doesNotSupport2FA.bundle.js"></script>
 </head>
 
 <body>
@@ -17,16 +17,17 @@
       <path d="M 19.0909 2L 0.909091 2C 0.667985 2 0.436754 1.89464 0.266266 1.70711C 0.0957788 1.51957 0 1.26522 0 1C 0 0.734784 0.0957788 0.480429 0.266266 0.292892C 0.436754 0.105356 0.667985 0 0.909091 0L 19.0909 0C 19.332 0 19.5632 0.105356 19.7337 0.292892C 19.9042 0.480429 20 0.734784 20 1C 20 1.26522 19.9042 1.51957 19.7337 1.70711C 19.5632 1.89464 19.332 2 19.0909 2Z" transform="translate(2 18)"/>
     </svg>
   </a>
-  <img srcset="./images/well_done.png, ./images/well_done@2x.png 2x" src="./images/well_done@2x.png" alt="Well Done Art" class="main-art"/>
-  <h1 class="extension-headline">Nice!</h1>
+  <img srcset="./images/2fa_not_available.png, ./images/2fa_not_available@2x.png 2x" src="./images/2fa_not_available@2x.png" alt="Main Art" class="main-art"/>
+  <h1 class="extension-headline">No 2FA here :(</h1>
   <div>
     <p class="extension__body-text">
-      Just like that, you've pissed off a hacker. Well done!
+      Here are some ways to better protect your account on <br/>
+      <span id="siteName" class="extension__body-text--bold">website.com</span>:
     </p>
-    <p class="extension__body-text">
-      We'll stop bugging you with reminders for <br/>
-      <span id="siteName" class="extension__body-text--bold">website.com</span>.
-    </p>
+    <ul class="extension__list">
+      <li>Create a unique password</li>
+      <li>Use a password manager</li>
+    </ul>
   </div>
 </body>
 
