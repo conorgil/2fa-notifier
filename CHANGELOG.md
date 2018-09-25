@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.8.0] - 2018-09-24
 ### Added
 - Update browser action menu to show a custom
   page if the user has indicated that they have
@@ -15,7 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   initially indicates that they enabled 2FA
   to improve text and include illustration.
 - Included data updates from twofactorauth.org.
-- Updated and cleaned underlying data [#62](https://github.com/conorgil/2fa-notifier/issues/62).
+- Updated and cleaned underlying data [[62]].
 
 ## [0.7.2]
 ### Fixed
@@ -111,7 +113,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [0.1.0] - 2018-04-09
 Initial release
 
-[Unreleased]: https://github.com/conorgil/2fa-notifier/compare/v0.7.2...HEAD
+[Unreleased]: https://github.com/conorgil/2fa-notifier/compare/v0.8.0...HEAD
+[0.8.0]: https://github.com/conorgil/2fa-notifier/compare/v0.7.2...v0.8.0
 [0.7.2]: https://github.com/conorgil/2fa-notifier/compare/v0.7.1...v0.7.2
 [0.7.1]: https://github.com/conorgil/2fa-notifier/compare/v0.7.0...v0.7.1
 [0.7.0]: https://github.com/conorgil/2fa-notifier/compare/v0.6.0...v0.7.0
@@ -126,4 +129,5 @@ Initial release
 [0.2.0]: https://github.com/conorgil/2fa-notifier/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/conorgil/2fa-notifier/releases/tag/v0.1.0
 
+[62]: https://github.com/conorgil/2fa-notifier/issues/62
 [67]: https://github.com/conorgil/2fa-notifier/issues/67
