@@ -1,6 +1,6 @@
 import { browser } from 'webextension-polyfill-ts';
 import { popNotification } from './notifications';
-import { loadServiceConfig, SERVICE_CONFIG } from '../utils/dataService';
+import { loadOriginConfig, OriginConfig } from '../utils/dataService';
 import { StorageService } from '../utils/storageService';
 import { userAlreadyEnabled2faOnSite } from '../utils';
 
@@ -8,55 +8,56 @@ const DAY_IN_MILLISECONDS = 1000 * 60 * 60 * 24;
 
 export async function processUrl(url: URL) {
   // TODO: extract into function
-  let site = url.hostname;
-  let config = await loadServiceConfig(url);
+  let config = await loadOriginConfig(url);
 
   if (config === undefined) {
-    await noData(site);
+    await noData(url);
     return;
   }
 
   let has2FA = config.tfa;
   if (!has2FA) {
-    await tfaNotSupported(site);
+    await tfaNotSupported(url);
     return;
   }
 
-  await tfaSupported(site, config);
+  await tfaSupported(url, config);
 }
 
-async function noData(site: string) {
-  console.log('No data found for this site: %s', site);
+async function noData(url: URL) {
+  console.log('No data found for this site: %s', url.hostname);
   await showBrowserActionIconForNo2faSupport();
 }
 
-async function tfaNotSupported(site: string) {
-  console.log('%s DOES NOT support 2FA!', site);
+async function tfaNotSupported(url: URL) {
+  console.log('%s DOES NOT support 2FA!', url.hostname);
   await showBrowserActionIconForNo2faSupport();
 }
 
-async function tfaSupported(site: string, config: SERVICE_CONFIG) {
+async function tfaSupported(url: URL, config: OriginConfig) {
   showBrowserActionIconFor2faSupport();
+  
+  let hostname = url.hostname;
   let docsUrl = config.doc;
   let message = '';
 
   if (docsUrl) {
-    console.log('[tfaSupported] %s DOES support 2FA and DOES have docs! Woo :)', site);
+    console.log('[tfaSupported] %s DOES support 2FA and DOES have docs! Woo :)', hostname);
     message = 'Click here for info on how to enable it!';
   } else {
-    console.log('[tfaSupported] %s DOES support 2FA, but DOES NOT have docs! Boo :(', site);
+    console.log('[tfaSupported] %s DOES support 2FA, but DOES NOT have docs! Boo :(', hostname);
     message = 'Check their website for info on how to enable it.';
   }
 
   let options = {
-    title: site + ' supports 2FA!',
+    title: hostname + ' supports 2FA!',
     message: message
   };
 
-  if (await shouldShowNotification(site)) {
-    popNotification(site, options, config);
+  if (await shouldShowNotification(url)) {
+    popNotification(url, options, config);
   } else {
-    console.log('[tfaSupported] Skipping notification for %s', site);
+    console.log('[tfaSupported] Skipping notification for %s', hostname);
   }
 }
 
@@ -86,14 +87,14 @@ async function showBrowserActionIconForNo2faSupport() {
  * Return true if we should pop a notification for the
  * current site; otherwise, false.
  * 
- * @param site The site the user is currently visiting
+ * @param url The URL of the site the user is currently visiting.
  */
-export async function shouldShowNotification(site: string) {
-  if (await userAlreadyEnabled2faOnSite(site)) {
+export async function shouldShowNotification(url: URL) {
+  if (await userAlreadyEnabled2faOnSite(url)) {
     return false;
   }
 
-  if (await notificationWasShownRecently(site)) {
+  if (await notificationWasShownRecently(url)) {
     return false;
   }
 
@@ -104,8 +105,8 @@ export async function shouldShowNotification(site: string) {
  * Return true if a notification for the current origin
  * was already shown within the last 24 hours.
  */
-async function notificationWasShownRecently(site: string) {
-  let siteSettings = await StorageService.getOrCreateSiteSettings(site); 
+async function notificationWasShownRecently(url: URL) {
+  let siteSettings = await StorageService.getOrCreateSiteSettings(url); 
   if (!siteSettings.previousNotificationTimestamp) {
     return false;
   }
@@ -115,6 +116,6 @@ async function notificationWasShownRecently(site: string) {
     return false;
   }
 
-  console.log('[shouldShowNotification] Notification was already shown for %s at %s', site, siteSettings.previousNotificationTimestamp);
+  console.log('[shouldShowNotification] Notification was already shown for %s at %s', url.hostname, siteSettings.previousNotificationTimestamp);
   return true;
 }

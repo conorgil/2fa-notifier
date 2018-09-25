@@ -9,9 +9,9 @@ import {
  */
 async function redirectPage() {
   let tab = await getCurrentTab();
-  let currentSite = new URL(tab.url).hostname;
+  let currentUrl = new URL(tab.url);
 
-  let is2faAlreadyEnabled = await userAlreadyEnabled2faOnSite(currentSite);
+  let is2faAlreadyEnabled = await userAlreadyEnabled2faOnSite(currentUrl);
   if (is2faAlreadyEnabled) {
     window.location.href = '../browserAction/previouslyEnabled2FA.html';
     return;

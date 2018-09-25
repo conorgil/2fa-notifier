@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Update confirmation page shown after a user
   initially indicates that they enabled 2FA
   to improve text and include illustration.
+- Included data updates from twofactorauth.org.
+- Updated and cleaned underlying data [#62](https://github.com/conorgil/2fa-notifier/issues/62).
 
 ## [0.7.2]
 ### Fixed

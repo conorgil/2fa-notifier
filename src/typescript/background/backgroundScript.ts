@@ -7,7 +7,7 @@ const STATUS_COMPLETE = 'complete';
 
 browser.tabs.onUpdated.addListener(async function (tabId: number, changeInfo: Tabs.OnUpdatedChangeInfoType, tab: Tabs.Tab) {
   let currentTab = await getCurrentTab();
-  if (tabId === currentTab.id && changeInfo.status === STATUS_COMPLETE) {
+  if (currentTab && tabId === currentTab.id && changeInfo.status === STATUS_COMPLETE) {
     console.log('[background_script:tabs.onUpdated] tab %d status complete', tabId);
     processTab(currentTab);
   }

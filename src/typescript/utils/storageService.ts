@@ -1,5 +1,4 @@
 import { browser } from "webextension-polyfill-ts";
-import { getCurrentTab } from "../utils";
 
 const SITE_SETTINGS = 'SITE_SETTINGS';
 
@@ -9,7 +8,7 @@ export interface SiteSettingsType {
 }
 
 interface SiteSettingsMapType {
-  [origin: string]: SiteSettingsType;
+  [hostname: string]: SiteSettingsType;
 }
 
 export class StorageService {
@@ -27,22 +26,24 @@ export class StorageService {
     await browser.storage.local.set({ [SITE_SETTINGS]: settings });
   }
 
-  static async getOrCreateSiteSettings(site: string): Promise<SiteSettingsType> {
-    let allOriginSettings = await this.getOrCreateAllSiteSettings();
-    if (!allOriginSettings[site]) {
+  static async getOrCreateSiteSettings(url: URL): Promise<SiteSettingsType> {
+    let hostname = url.hostname;
+    let allSiteSettings = await this.getOrCreateAllSiteSettings();
+    if (!allSiteSettings[hostname]) {
       return {};
     }
 
-    return allOriginSettings[site];
+    return allSiteSettings[hostname];
   }
 
-  static async setSiteSettings(site: string, settings: SiteSettingsType) {
-    let allOriginSettings = await this.getOrCreateAllSiteSettings();
-    if (!allOriginSettings) {
+  static async setSiteSettings(url: URL, settings: SiteSettingsType) {
+    let hostname = url.hostname;
+    let allSiteSettings = await this.getOrCreateAllSiteSettings();
+    if (!allSiteSettings) {
       return;
     }
 
-    allOriginSettings[site] = settings;
-    await this.setAllSiteSettings(allOriginSettings);
+    allSiteSettings[hostname] = settings;
+    await this.setAllSiteSettings(allSiteSettings);
   }
 }

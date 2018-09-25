@@ -17,11 +17,11 @@ $(async function () {
 
   $('#alreadyEnabled2fa').click(async function () {
     let tab = await getCurrentTab();
-    let site = new URL(tab.url).hostname;
-    console.log('User indicated that they already enabled 2FA on %s', site);
-    let settings = await StorageService.getOrCreateSiteSettings(site);
+    let url = new URL(tab.url);
+    console.log('User indicated that they already enabled 2FA on %s', url.hostname);
+    let settings = await StorageService.getOrCreateSiteSettings(url);
     settings.is2faEnabled = true;
-    await StorageService.setSiteSettings(site, settings);
+    await StorageService.setSiteSettings(url, settings);
 
     window.location.href = '../browserAction/confirmation.html';
     return;

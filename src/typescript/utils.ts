@@ -1,5 +1,5 @@
 import { browser, Tabs } from "webextension-polyfill-ts";
-import { SERVICE_CONFIG, loadServiceConfig } from "./utils/dataService";
+import { OriginConfig, loadOriginConfig } from "./utils/dataService";
 import { StorageService } from "./utils/storageService";
 
 /**
@@ -22,14 +22,14 @@ export async function getCurrentTab(): Promise<Tabs.Tab> {
  * Return the 2FA configuration data for the origin loaded
  * in the current tab, or null if it is undefined.
  */
-export async function getConfigForCurrentTab(): Promise<SERVICE_CONFIG> {
+export async function getConfigForCurrentTab(): Promise<OriginConfig> {
   let currentTab = await getCurrentTab();
   if (!currentTab) {
     return null;
   }
 
   let currentUrl = currentTab.url;
-  let config = await loadServiceConfig(new URL(currentUrl));
+  let config = await loadOriginConfig(new URL(currentUrl));
   if (!config) {
     return null;
   }
@@ -56,17 +56,14 @@ export async function showCorrectSiteName(id: string) {
 
 /**
  * Returns true if the user has previously indicated that they
- * have already enabled 2FA on the given hostname.
+ * have already enabled 2FA on the given site.
  * 
- * @param site The hostname of the current site
+ * @param url The URL of the current site
  */
-// TODO: Change site from string to URL so that callers do not
-//       need to guess which string value to pass in.
-//       "Is is the hostname? origin? something else?"
-export async function userAlreadyEnabled2faOnSite(site: string): Promise<boolean> {
-  let originSettings = await StorageService.getOrCreateSiteSettings(site); 
+export async function userAlreadyEnabled2faOnSite(url: URL): Promise<boolean> {
+  let originSettings = await StorageService.getOrCreateSiteSettings(url); 
   if (originSettings.is2faEnabled) {
-    console.log('[shouldShowNotification] User already enabled 2FA for %s', site);
+    console.log('[shouldShowNotification] User already enabled 2FA for %s', url.hostname);
     return true;
   }
   return false;
