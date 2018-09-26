@@ -1,3 +1,5 @@
+# [2FA Notifier](https://2fanotifier.org/)
+
 2FA Notifier is a web extension that notifies users
 whether or not the sites they visit support 
 two factor authentication (2FA).
@@ -10,7 +12,8 @@ active initial development. Please create an issue to share your
 idea before investing time at the keyboard to make sure that your
 PR will be accepted.
 
-# Community
+## Community
+
 Inspired by [Jordan Sissel](https://gist.github.com/jordansissel/3088552) and others:
 
 * If a new user has a bad time, it's a bug.
