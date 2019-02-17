@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Changed
 - Removes jQuery as a dependency [[65]].
+- Updates dependencies.
 
 ## [0.8.0] - 2018-09-24
 ### Added
