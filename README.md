@@ -7,10 +7,8 @@ two factor authentication (2FA).
 It utilizes the data from the [twofactorauth.org](https://twofactorauth.org)
 project to determine which sites do and do not support 2FA.
 
-Contributions are gladly accepted, but the project is still under
-active initial development. Please create an issue to share your
-idea before investing time at the keyboard to make sure that your
-PR will be accepted.
+Contributions are gladly accepted! Create a new issue or comment
+on an existing issue to figure out how we can collaborate.
 
 ## Community
 
