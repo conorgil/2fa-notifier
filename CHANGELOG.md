@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- Removes jQuery as a dependency [[65]].
 
 ## [0.8.0] - 2018-09-24
 ### Added
@@ -130,4 +132,5 @@ Initial release
 [0.1.0]: https://github.com/conorgil/2fa-notifier/releases/tag/v0.1.0
 
 [62]: https://github.com/conorgil/2fa-notifier/issues/62
+[65]: https://github.com/conorgil/2fa-notifier/issues/65
 [67]: https://github.com/conorgil/2fa-notifier/issues/67

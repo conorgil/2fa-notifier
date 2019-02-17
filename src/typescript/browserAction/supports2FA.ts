@@ -1,21 +1,20 @@
-import * as $ from 'jquery';
 import { getConfigForCurrentTab, getCurrentTab, showCorrectSiteName } from '../utils';
 import { StorageService } from '../utils/storageService';
 
-$(async function () {
-  let originalWindowHeight = $(document).height();
+const CLASS_HIDDEN = 'hidden';
 
-  $('#more2faInfoButton').click(function () {
-    if ($('.methods').css('display') === 'none') {
-      $('.methods').toggle();
-      //$('html').css('height', originalWindowHeight);
-      $('#more2faInfoButton').addClass('methods__info-btn--hide');
-      //console.log($('.methods').css('display'));
-      //console.log('original window height = ' + originalWindowHeight);
-    }
+document.addEventListener("DOMContentLoaded", onDomContentLoaded);
+async function onDomContentLoaded() {
+  let more2faInfoButton = document.getElementById('more2faInfoButton');
+  more2faInfoButton.addEventListener('click', async function onClickedMore2faInfoButton() {
+    more2faInfoButton.classList.toggle(CLASS_HIDDEN);
+
+    let methodsInfo = document.querySelector('.methods');
+    methodsInfo.classList.toggle(CLASS_HIDDEN);
   });
 
-  $('#alreadyEnabled2fa').click(async function () {
+  let alreadyEnabledLink = document.getElementById('alreadyEnabled2fa');
+  alreadyEnabledLink.addEventListener('click', async function onClickedAlreadyEnabled2fa() {
     let tab = await getCurrentTab();
     let url = new URL(tab.url);
     console.log('User indicated that they already enabled 2FA on %s', url.hostname);
@@ -30,34 +29,50 @@ $(async function () {
   await showCorrect2faMethods();
   await showCorrectSiteName('siteName');
   await setupCorrectDocLink();
-});
+}
 
 async function showCorrect2faMethods() {
   let config = await getConfigForCurrentTab();
 
   if (!config.sms) {
-    hide2faMethod('sms');
+    hideElementById('sms');
   }
 
   if (!config.phone) {
-    hide2faMethod('phone');
+    hideElementById('phone');
   }
 
   if (!config.email) {
-    hide2faMethod('email');
+    hideElementById('email');
   }
 
   if (!config.software) {
-    hide2faMethod('software');
+    hideElementById('software');
   }
 
   if (!config.hardware) {
-    hide2faMethod('hardware');
+    hideElementById('hardware');
   }
 }
 
-function hide2faMethod(method: string) {
-  $(`#${method}`).toggle(false);
+/**
+ * Hide an element by adding the 'hide' class to its classList.
+ * 
+ * @param methodId The id of the element to hide.
+ */
+function hideElementById(methodId: string) {
+  let elToHide = document.getElementById(methodId);
+  elToHide.classList.add(CLASS_HIDDEN);
+}
+
+/**
+ * Show an element by removing the 'hide' class from its classList.
+ * 
+ * @param methodId The id of the element to show.
+ */
+function showElementById(methodId: string) {
+  let elToShow = document.getElementById(methodId);
+  elToShow.classList.remove(CLASS_HIDDEN);
 }
 
 async function setupCorrectDocLink() {
@@ -67,11 +82,13 @@ async function setupCorrectDocLink() {
   }
 
   if (config.doc) {
-    $('#cta-btn').attr('href', config.doc);
+    let el = document.getElementById('cta-btn');
+    el.setAttribute('href', config.doc);
     return;
   }
 
   await showCorrectSiteName('nameOfSiteWith2faAndNoDocs');
-  $('#cta-btn').toggle(false);
-  $('#missingDocs').toggle();
+  await hideElementById('cta-btn');
+  await hideElementById('more2faInfoButton');
+  await showElementById('missingDocs');
 }

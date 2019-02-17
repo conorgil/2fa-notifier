@@ -49,10 +49,12 @@ svg {
 }
 
 
+.hidden {
+  display: none;
+}
 
 
 .methods {
-  display: none;
   font-weight: 400;
   width: 100%;
 }
@@ -62,10 +64,6 @@ svg {
   margin-bottom: 1rem;
   transition: transform 400ms;
 	transition-timing-function: cubic-bezier(0.2,1,0.3,1);
-}
-
-.methods__info-btn--hide {
-  display: none;
 }
 
 .methods__info-btn:hover {
@@ -250,7 +248,6 @@ svg {
 }
 
 .missing-docs {
-  display: none;
   margin: 0.25rem 0;
   padding: 0.5rem 0;
   width: 100%;
